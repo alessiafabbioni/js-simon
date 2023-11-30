@@ -53,6 +53,20 @@ function noButtons() {
 //quando il timer fa sparire i numeri il tag disabled sparisce e possiamo permettere alla 
 //persona di inserire i numeri
 
+setTimeout (noDisabled, 5000);
+
+function noDisabled(){
+    let input =document.querySelectorAll(".form-control");
+    for (let i = 0; i < input.length; i++) {
+        input[i].removeAttribute('disabled')
+    }
+}
 
 
-//Cliccando su verifica 
+//Quindi qui mi servirà una funzione che mi checca se i numeri che ho inserito sono gli stessi che erano usciti randomicamente all'inizio
+
+
+//Cliccando su verifica:
+    //Mi appare un Alert che mi dice quanti numeri ho azzeccato e quali (mostro direttamente i numeri?)
+
+
