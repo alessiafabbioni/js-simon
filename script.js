@@ -24,8 +24,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let buttons = document.querySelectorAll("#numbersGenned .btn");
+    let gennedNumbers = [];
 
     for (let i = 0; i < buttons.length; i++) {
-        buttons[i].textContent = genRandomNumber();
+        let randomN = genRandomNumber();
+        buttons[i].textContent = randomN;
+
+        gennedNumbers.push(randomN);
     }
+
+
+    console.log("Numeri generati: ", gennedNumbers);
 });
+
+//imposto il timer e faccio sparire i bottoni
+    //st timeout option
+
+setTimeout(noButtons, 5000);
+
+function noButtons() {
+    let buttons = document.querySelectorAll("#numbersGenned .btn");
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.display = 'none';
+    }
+}
+
+//quando il timer fa sparire i numeri il tag disabled sparisce e possiamo permettere alla 
+//persona di inserire i numeri
+
+
+
+//Cliccando su verifica 
